@@ -56,15 +56,16 @@ namespace Entertainment_Store
         public void returnRentals(Customer c, int day)
         {
             List<IRental> customersRentals = c.rentals;
+            
             foreach(IRental r in customersRentals)
             {
                 if (r.isDue())
                 {
-                    // update currRentals
-
-                    // update pastRentals
-
-                    // update inventory
+                    currRentals.Remove(r);
+                    pastRentals.Add(r);
+                    //Get list of games in r
+                    //Use foreach on returned list and add to inv
+                    //remove r from customer
                 }
             }
         }
