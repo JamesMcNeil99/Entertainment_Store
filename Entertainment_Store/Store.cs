@@ -58,7 +58,14 @@ namespace Entertainment_Store
             List<IRental> customersRentals = c.rentals;
             foreach(IRental r in customersRentals)
             {
+                if (r.isDue())
+                {
+                    // update currRentals
 
+                    // update pastRentals
+
+                    // update inventory
+                }
             }
         }
     }

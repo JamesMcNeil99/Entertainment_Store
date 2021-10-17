@@ -10,5 +10,7 @@ namespace Entertainment_Store
         public int amount();
 
         public double getPrice(Dictionary<Genre, double> prices);
+
+        public bool isDue();
     }
 }
