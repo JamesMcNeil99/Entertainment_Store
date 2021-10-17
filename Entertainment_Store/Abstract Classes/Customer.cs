@@ -8,7 +8,7 @@ namespace Entertainment_Store
     {
         string name;
         protected IRentBehavior r;
-        List<IRental> rentals;
+        public List<IRental> rentals { get; set; }
         public Customer(IRentBehavior r, string name)
         {
             this.name = name;

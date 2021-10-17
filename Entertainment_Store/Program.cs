@@ -17,7 +17,8 @@ namespace Entertainment_Store
                 //---------------------------Morning Portion (Before Open for Business)---------------------
                 foreach (Customer c in customers)
                 {
-                    //store.check(c)
+                    //customers need to return due rentals
+                    store.returnRentals(c, day);
                 }
                 
                 
