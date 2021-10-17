@@ -27,12 +27,11 @@ namespace Entertainment_Store
                 
                 Random rand = new Random();
                 int customersToday = rand.Next(1, 10);
-                
+                int servicedCustomers = 0;
+
                 //send in eligible customers
                 foreach (Customer c in customers)
                 {
-                    int servicedCustomers = 0;
-                    while (servicedCustomers < customersToday)
                     {
                         //if store has games (hardcore needs more than 3 ?) && Customer c is eligible (aka no more than 3 currently rented games)
                         if (c is HardcoreCustomer && c.getIsEligible() && store.gamesAvailable() >= 3)
@@ -44,6 +43,11 @@ namespace Entertainment_Store
                         {
                             store.serviceCustomer(c);
                             servicedCustomers++;
+                        }
+                        //if customers serviced reaches random allotment for current day, breaks out and continues to next day. 
+                        if(customersToday == servicedCustomers)
+                        {
+                            break;
                         }
                     }
                 }

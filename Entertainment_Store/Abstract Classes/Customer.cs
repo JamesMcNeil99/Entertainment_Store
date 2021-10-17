@@ -17,20 +17,25 @@ namespace Entertainment_Store
 
         public IRental createRental(IInventory games)
         {
-            IRental rental = r.rent(games);
+            IRental rental = r.rent(games, getNumOfGamesRented());
             rentals.Add(rental);
             return rental;
          
         }
 
-        public bool getIsEligible()
+        public int getNumOfGamesRented()
         {
             int x = 0;
-            foreach(IRental rental in rentals)
+            foreach (IRental rental in rentals)
             {
                 x += rental.amount();
             }
+            return x;
+        }
 
+        public bool getIsEligible()
+        {
+            int x = getNumOfGamesRented();
             if (x == 3)
                 return false;
             else
