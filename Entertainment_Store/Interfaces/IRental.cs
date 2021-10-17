@@ -9,6 +9,6 @@ namespace Entertainment_Store
         public void addDay();
         public int amount();
 
-        public double getPrice();
+        public double getPrice(Dictionary<Genre, double> prices);
     }
 }

@@ -26,5 +26,15 @@ namespace Entertainment_Store
             return games.Count;
         }
 
+        public double getPrice(Dictionary<Genre, double> prices)
+        {
+            double price = 0;
+            foreach( IGame g in games)
+            {
+                price += prices[g.getGenre()];
+            }
+            return price;
+        }
+
     }
 }

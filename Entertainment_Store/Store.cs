@@ -23,11 +23,12 @@ namespace Entertainment_Store
         {
             return inv.amount();
         }
+        
         public void serviceCustomer(Customer c)
         {
             IRental rental = c.createRental(this.inv);
             this.currRentals.Add(rental);
-            //Customer pays for rental
+            profit += rental.getPrice(prices);
 
         }
         public Dictionary<Genre, double> setPrices()

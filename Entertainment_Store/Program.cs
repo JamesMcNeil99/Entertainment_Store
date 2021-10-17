@@ -34,7 +34,16 @@ namespace Entertainment_Store
                     while (servicedCustomers < customersToday)
                     {
                         //if store has games (hardcore needs more than 3 ?) && Customer c is eligible (aka no more than 3 currently rented games)
-                        store.serviceCustomer(c);
+                        if (c is HardcoreCustomer && c.getIsEligible() && store.gamesAvailable() >= 3)
+                        {
+                            store.serviceCustomer(c);
+                            servicedCustomers++;
+                        }
+                        else if (!(c is HardcoreCustomer) && c.getIsEligible() && store.gamesAvailable() > 0)
+                        {
+                            store.serviceCustomer(c);
+                            servicedCustomers++;
+                        }
                     }
                 }
 
