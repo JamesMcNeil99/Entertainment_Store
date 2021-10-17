@@ -36,5 +36,15 @@ namespace Entertainment_Store
             return price;
         }
 
+        // will check to see if the rental is due and return true
+        // if it is due, false otherwise
+        public bool isDue()
+        {
+            if (this.daysRented == this.maxDays)
+                return true;
+            else
+                return false;
+        }
+
     }
 }
