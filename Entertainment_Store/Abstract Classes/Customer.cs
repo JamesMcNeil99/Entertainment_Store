@@ -7,13 +7,34 @@ namespace Entertainment_Store
     public abstract class Customer
     {
         string name;
-        IRentBehavior r;
+        protected IRentBehavior r;
+        List<IRental> rentals;
         public Customer(IRentBehavior r, string name)
         {
             this.name = name;
             this.r = r;
         }
 
-        public abstract List<IGame> selectGames(List<IGame> inv);
+        public IRental createRental(IInventory games)
+        {
+            IRental rental = r.rent(games);
+            rentals.Add(rental);
+            return rental;
+         
+        }
+
+        public bool getIsEligible()
+        {
+            int x = 0;
+            foreach(IRental rental in rentals)
+            {
+                x += rental.amount();
+            }
+
+            if (x == 3)
+                return false;
+            else
+                return true;
+        }
     }
 }

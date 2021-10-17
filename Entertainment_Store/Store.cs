@@ -25,6 +25,9 @@ namespace Entertainment_Store
         }
         public void serviceCustomer(Customer c)
         {
+            IRental rental = c.createRental(this.inv);
+            this.currRentals.Add(rental);
+            //Customer pays for rental
 
         }
         public Dictionary<Genre, double> setPrices()
@@ -39,6 +42,14 @@ namespace Entertainment_Store
 
             return d;
 
+        }
+
+        public void updateRentals()
+        {
+            foreach(IRental r in currRentals)
+            {
+                r.addDay();
+            }
         }
     }
 }

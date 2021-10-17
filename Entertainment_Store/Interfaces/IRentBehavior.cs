@@ -6,6 +6,7 @@ namespace Entertainment_Store
 {
     public interface IRentBehavior
     {
-        public void rent();
+        public IRental rent(IInventory games);
+        
     }
 }

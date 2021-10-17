@@ -7,6 +7,47 @@ namespace Entertainment_Store
         static void Main(string[] args)
         {
             Customer[] customers = makeCustomers();
+            Store store = new Store();
+
+
+
+            //main loop:
+            for(int day = 0; day < 35; day++)
+            {
+                //---------------------------Morning Portion (Before Open for Business)---------------------
+                foreach (Customer c in customers)
+                {
+                    //store.check(c)
+                }
+                
+                
+                
+                //---------------------------Day Portion (Open for Business)---------------------
+                
+                Random rand = new Random();
+                int customersToday = rand.Next(1, 10);
+                
+                //send in eligible customers
+                foreach (Customer c in customers)
+                {
+                    int servicedCustomers = 0;
+                    while (servicedCustomers < customersToday)
+                    {
+                        //if store has games (hardcore needs more than 3 ?) && Customer c is eligible (aka no more than 3 currently rented games)
+                        store.serviceCustomer(c);
+                    }
+                }
+
+
+                //---------------------------Night Portion (After Closed for Business)---------------------
+                //Loop through active rentals, increment day count to check before 
+                store.updateRentals();
+
+            }
+
+            //print out past rentals, current rentals,  and money made.
+
+
         }
         
         

@@ -6,5 +6,6 @@ namespace Entertainment_Store
 {
     public interface IGame
     {
+        public Genre getGenre();
     }
 }

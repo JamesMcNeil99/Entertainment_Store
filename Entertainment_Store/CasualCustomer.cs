@@ -11,10 +11,13 @@ namespace Entertainment_Store
 
         }
 
-        public override List<IGame> selectGames(List<IGame> inv)
-        {
 
+        /*
+        public override IRental createRental(List<IGame> games)
+        {
+            return base.r.rent();
         }
+        */
 
     }
 }

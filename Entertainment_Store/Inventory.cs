@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Entertainment_Store
 {
-    class Inventory: IInventory
+    public class Inventory: IInventory
     {
         List<IGame> inv;
 

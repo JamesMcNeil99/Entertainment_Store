@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Entertainment_Store
 {
-    interface IInventory
+    public interface IInventory
     {
         public int amount();
 

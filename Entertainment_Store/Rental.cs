@@ -21,6 +21,10 @@ namespace Entertainment_Store
         {
             this.daysRented += 1;
         }
+        public int amount()
+        {
+            return games.Count;
+        }
 
     }
 }

@@ -6,9 +6,9 @@ namespace Entertainment_Store
 {
     public class CasualRent: IRentBehavior
     {
-        public void rent()
+        public IRental rent(IInventory games)
         {
-
+            
         }
     }
 }
