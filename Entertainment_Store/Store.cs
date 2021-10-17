@@ -51,5 +51,14 @@ namespace Entertainment_Store
                 r.addDay();
             }
         }
+
+        public void returnRentals(Customer c, int day)
+        {
+            List<IRental> customersRentals = c.rentals;
+            foreach(IRental r in customersRentals)
+            {
+
+            }
+        }
     }
 }
