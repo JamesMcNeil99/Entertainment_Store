@@ -26,7 +26,7 @@ namespace Entertainment_Store
                 //---------------------------Day Portion (Open for Business)---------------------
                 
                 Random rand = new Random();
-                int customersToday = rand.Next(1, 10);
+                int customersToday = rand.Next(1, 11);
                 int servicedCustomers = 0;
 
                 //send in eligible customers
@@ -75,7 +75,7 @@ namespace Entertainment_Store
 
             for(int x = 0; x < customers.Length; x++)
             {
-                int y = rand.Next(1, 3);
+                int y = rand.Next(1, 4);
 
                 if (y == 1)
                     customers[x] = CustomerGenerator.createCasualCustomer();

@@ -17,7 +17,7 @@ namespace Entertainment_Store
 
         public IRental createRental(IInventory games)
         {
-            IRental rental = r.rent(games, getNumOfGamesRented());
+            IRental rental = r.rent(games, getNumOfGamesRented(), this);
             rentals.Add(rental);
             return rental;
          
