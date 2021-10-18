@@ -56,26 +56,29 @@ namespace Entertainment_Store
         public void returnRentals(Customer c)
         {
             List<IRental> customersRentals = c.rentals;
-            
-            foreach(IRental rental in customersRentals)
+
+            if (!(customersRentals.Count == 0))
             {
-                if (rental.isDue())
+                foreach (IRental rental in customersRentals)
                 {
-                    //update current and past rentals
-                    currRentals.Remove(rental);
-                    pastRentals.Add(rental);
-
-                    //Get list of games in rental
-                    List<IGame> gamesInRental = rental.getGames();
-
-                    //Use foreach on returned list and add to inv
-                    foreach (IGame g in gamesInRental)
+                    if (rental.isDue())
                     {
-                        this.inv.addItem(g);
-                    }
+                        //update current and past rentals
+                        currRentals.Remove(rental);
+                        pastRentals.Add(rental);
 
-                    //remove rental from customer
-                    customersRentals.Remove(rental);
+                        //Get list of games in rental
+                        List<IGame> gamesInRental = rental.getGames();
+
+                        //Use foreach on returned list and add to inv
+                        foreach (IGame g in gamesInRental)
+                        {
+                            this.inv.addItem(g);
+                        }
+
+                        //remove rental from customer
+                        customersRentals.Remove(rental);
+                    }
                 }
             }
         }
