@@ -27,19 +27,20 @@ namespace Entertainment_Store
                 //---------------------------Day Portion (Open for Business)---------------------
                 
                 Random rand = new Random();
-                int customersToday = rand.Next(1, 10);
+                int customersToday = rand.Next(1, 11);
                 int servicedCustomers = 0;
 
                 //send in eligible customers
                 foreach (Customer c in customers)
                 {
                     {
-                        //if store has games (hardcore needs more than 3 ?) && Customer c is eligible (aka no more than 3 currently rented games)
+                        //Checks for hardcore customers -> if store has games (hardcore needs more than 3 ?) && Customer c is eligible (aka no more than 3 currently rented games)
                         if (c is HardcoreCustomer && c.getIsEligible() && store.gamesAvailable() >= 3)
                         {
                             store.serviceCustomer(c);
                             servicedCustomers++;
                         }
+                        //Checks for not hardcore and at least one game 
                         else if (!(c is HardcoreCustomer) && c.getIsEligible() && store.gamesAvailable() > 0)
                         {
                             store.serviceCustomer(c);
@@ -88,7 +89,7 @@ namespace Entertainment_Store
 
             for(int x = 0; x < customers.Length; x++)
             {
-                int y = rand.Next(1, 3);
+                int y = rand.Next(1, 4);
 
                 if (y == 1)
                     customers[x] = CustomerGenerator.createCasualCustomer();
