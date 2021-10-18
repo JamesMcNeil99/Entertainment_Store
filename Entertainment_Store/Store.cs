@@ -8,8 +8,8 @@ namespace Entertainment_Store
     {
         List<IRental> pastRentals;
         List<IRental> currRentals;
-        IInventory inv;
-        double profit;
+        public IInventory inv { get; set; }
+        public double profit { get; set; }
         Dictionary<Genre, double> prices;
         public Store()
         {
