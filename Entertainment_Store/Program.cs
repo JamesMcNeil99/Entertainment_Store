@@ -68,12 +68,12 @@ namespace Entertainment_Store
             Console.WriteLine("List of games currently available in the inventory: ");
             foreach(IGame game in gamesInStore)
             {
-                Console.WriteLine(game);
+                Console.WriteLine(game.getTitle());
             }
             Console.WriteLine();
 
             // amount of money the store made in the 35 days
-            Console.WriteLine("Store's earnings in the past 35 days: " + store.profit);
+            Console.WriteLine("Store's earnings in the past 35 days: $" + String.Format("{0:#,0.00}", store.profit));
             Console.WriteLine();
             //print out games in the store inventory and name
             //
@@ -84,9 +84,9 @@ namespace Entertainment_Store
                 Console.Write($"{r.getCustomer().name} rented  ");
                 for (int game = 0; game < r.getGames().Count - 1; game++)
                 {
-                    Console.Write(r.getGames()[game] + ", ");
+                    Console.Write(r.getGames()[game].getTitle() + ", ");
                 }
-                Console.Write(r.getGames()[r.getGames().Count] + $" for {r.getMaxDays()} days with a total cost of $" + String.Format("{0:#,0.##}", r.getTotal()));
+                Console.Write(r.getGames()[r.getGames().Count - 1].getTitle() + $" for {r.getMaxDays()} days with a total cost of $" + String.Format("{0:#,0.00}", r.getTotal()) + "\n");
             }
 
             //print out current rentals
@@ -96,9 +96,9 @@ namespace Entertainment_Store
                 Console.Write($"{r.getCustomer().name} is renting ");
                     for(int game = 0; game<r.getGames().Count -1; game++)
                     {
-                    Console.Write(r.getGames()[game] + ", ");
+                    Console.Write(r.getGames()[game].getTitle() + ", ");
                     }
-                Console.Write(r.getGames()[r.getGames().Count] + $" for {r.getMaxDays()} days with a total cost of $" + String.Format("{0:#,0.##}",r.getTotal()));
+                Console.Write(r.getGames()[r.getGames().Count - 1].getTitle() + $" for {r.getMaxDays()} days with a total cost of $" + String.Format("{0:#,0.00}",r.getTotal())+ "\n");
             }
 
 

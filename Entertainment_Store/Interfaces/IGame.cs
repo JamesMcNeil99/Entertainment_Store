@@ -7,5 +7,7 @@ namespace Entertainment_Store
     public interface IGame
     {
         public Genre getGenre();
+        public string getTitle();
+
     }
 }
