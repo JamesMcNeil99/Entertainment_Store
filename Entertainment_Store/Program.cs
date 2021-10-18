@@ -16,11 +16,12 @@ namespace Entertainment_Store
             for(int day = 0; day < 35; day++)
             {
                 //---------------------------Morning Portion (Before Open for Business)---------------------
-                foreach (Customer c in customers)
-                {
-                    //customers need to return due rentals
-                    store.returnRentals(c);
-                }
+                if(day != 0)
+                    foreach (Customer c in customers)
+                    {
+                        //customers need to return due rentals
+                        store.returnRentals(c);
+                    }
                 
                 
                 
