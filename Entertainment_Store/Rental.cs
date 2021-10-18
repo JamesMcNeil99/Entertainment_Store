@@ -6,7 +6,7 @@ namespace Entertainment_Store
 {
     public class Rental: IRental
     {
-        public List<IGame> games { get; set; }
+        List<IGame> games;
         int daysRented, maxDays;
         Customer c;
 
@@ -44,6 +44,12 @@ namespace Entertainment_Store
                 return true;
             else
                 return false;
+        }
+
+        // returns list of games
+        public List<IGame> getGames()
+        {
+            return this.games;
         }
 
     }
