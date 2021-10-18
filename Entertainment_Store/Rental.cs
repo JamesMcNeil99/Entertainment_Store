@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Entertainment_Store
 {
-    class Rental: IRental
+    public class Rental: IRental
     {
-        List<IGame> games;
+        public List<IGame> games { get; set; }
         int daysRented, maxDays;
         Customer c;
 

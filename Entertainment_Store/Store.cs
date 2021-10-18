@@ -61,10 +61,13 @@ namespace Entertainment_Store
             {
                 if (r.isDue())
                 {
+                    //update current and past rentals
                     currRentals.Remove(r);
                     pastRentals.Add(r);
+
                     //Get list of games in r
                     //Use foreach on returned list and add to inv
+                    foreach (IGame g in r.games)
                     //remove r from customer
                 }
             }
