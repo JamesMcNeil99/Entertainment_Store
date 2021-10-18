@@ -33,12 +33,13 @@ namespace Entertainment_Store
                 foreach (Customer c in customers)
                 {
                     {
-                        //if store has games (hardcore needs more than 3 ?) && Customer c is eligible (aka no more than 3 currently rented games)
+                        //Checks for hardcore customers -> if store has games (hardcore needs more than 3 ?) && Customer c is eligible (aka no more than 3 currently rented games)
                         if (c is HardcoreCustomer && c.getIsEligible() && store.gamesAvailable() >= 3)
                         {
                             store.serviceCustomer(c);
                             servicedCustomers++;
                         }
+                        //Checks for not hardcore and at least one game 
                         else if (!(c is HardcoreCustomer) && c.getIsEligible() && store.gamesAvailable() > 0)
                         {
                             store.serviceCustomer(c);
@@ -58,8 +59,10 @@ namespace Entertainment_Store
                 store.updateRentals();
 
             }
-
-            //print out past rentals, current rentals,  and money made.
+            //print out games in the store inventory and name
+            //
+            //print out past rentals with customer name, number of days, total price
+            //print out current rentals
 
 
         }

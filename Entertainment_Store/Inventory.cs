@@ -6,30 +6,30 @@ namespace Entertainment_Store
 {
     public class Inventory: IInventory
     {
-        List<IGame> inv;
+        List<IGame> games;
 
-        public Inventory()
+        public Inventory(List<IGame> games)
         {
-            inv = new List<IGame>();
+            this.games = games;
         }
 
         public int amount()
         {
-            return inv.Count;
+            return games.Count;
         }
 
         public void addItem(IGame g)
         {
-            inv.Add(g);
+            games.Add(g);
         }
 
         public void removeItem(IGame g)
         {
-            inv.Remove(g);
+            games.Remove(g);
         }
         public IGame retrieveItem(int i)
         {
-            IGame g = inv[i];
+            IGame g = games[i];
             removeItem(g);
             return g;
         }
