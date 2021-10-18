@@ -11,6 +11,7 @@ namespace Entertainment_Store
         public List<IRental> rentals { get; set; }
         public Customer(IRentBehavior r, string name)
         {
+            rentals = new List<IRental>();
             this.name = name;
             this.r = r;
         }
