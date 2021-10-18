@@ -56,6 +56,7 @@ namespace Entertainment_Store
         public void returnRentals(Customer c)
         {
             List<IRental> customersRentals = c.rentals;
+            List<IRental> rentalsToRemove = new List<IRental>();
 
             if (!(customersRentals.Count == 0))
             {
@@ -77,8 +78,14 @@ namespace Entertainment_Store
                         }
 
                         //remove rental from customer
-                        customersRentals.Remove(rental);
+                        rentalsToRemove.Add(rental);
                     }
+                }
+
+                // removes rentals from customer's rental
+                foreach(IRental rental in rentalsToRemove)
+                {
+                    customersRentals.Remove(rental);
                 }
             }
         }
