@@ -34,5 +34,10 @@ namespace Entertainment_Store
             return g;
         }
 
+        public List<IGame> getGames()
+        {
+            return this.inv;
+        }
+
     }
 }

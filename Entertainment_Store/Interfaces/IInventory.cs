@@ -13,6 +13,8 @@ namespace Entertainment_Store
         public void removeItem(IGame g);
 
         public IGame retrieveItem(int i);
+
+        public List<IGame> getGames();
     }
         
 }

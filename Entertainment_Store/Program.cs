@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Entertainment_Store
 {
@@ -59,6 +60,20 @@ namespace Entertainment_Store
                 store.updateRentals();
 
             }
+
+            //print out past rentals, current rentals,  and money made.
+            Console.WriteLine("Store inventory amount: " + store.inv.amount());
+            List<IGame> gamesInStore = store.inv.getGames();
+            Console.WriteLine("List of games currently available in the inventory: ");
+            foreach(IGame game in gamesInStore)
+            {
+                Console.WriteLine(game);
+            }
+            Console.WriteLine();
+
+            // amount of money the store made in the 35 days
+            Console.WriteLine("Store's earnings in the past 35 days: " + store.profit);
+            Console.WriteLine();
             //print out games in the store inventory and name
             //
             //print out past rentals with customer name, number of days, total price
