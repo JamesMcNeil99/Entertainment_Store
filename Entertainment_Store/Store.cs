@@ -83,5 +83,9 @@ namespace Entertainment_Store
         {
             return this.currRentals;
         }
+        public List<IRental> getPastRentals()
+        {
+            return this.pastRentals;
+        }
     }
 }

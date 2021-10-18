@@ -19,6 +19,6 @@ namespace Entertainment_Store
 
         public int getMaxDays();
 
-        pub
+        public double getTotal();
     }
 }

@@ -36,7 +36,7 @@ namespace Entertainment_Store
 
         public List<IGame> getGames()
         {
-            return this.inv;
+            return this.games;
         }
 
     }

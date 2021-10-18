@@ -9,6 +9,7 @@ namespace Entertainment_Store
         List<IGame> games;
         int daysRented, maxDays;
         Customer c;
+        double total;
 
         public Rental(List<IGame> games, Customer c, int maxDays)
         {
@@ -33,7 +34,9 @@ namespace Entertainment_Store
             {
                 price += prices[g.getGenre()];
             }
+            this.total = price;
             return price;
+
         }
 
         // will check to see if the rental is due and return true
@@ -60,6 +63,10 @@ namespace Entertainment_Store
         public int getMaxDays()
         {
             return maxDays;
+        }
+        public double getTotal()
+        {
+            return total;
         }
 
     }
