@@ -53,19 +53,29 @@ namespace Entertainment_Store
             }
         }
 
-        public void returnRentals(Customer c, int day)
+        public void returnRentals(Customer c)
         {
             List<IRental> customersRentals = c.rentals;
             
-            foreach(IRental r in customersRentals)
+            foreach(IRental rental in customersRentals)
             {
-                if (r.isDue())
+                if (rental.isDue())
                 {
-                    currRentals.Remove(r);
-                    pastRentals.Add(r);
-                    //Get list of games in r
+                    //update current and past rentals
+                    currRentals.Remove(rental);
+                    pastRentals.Add(rental);
+
+                    //Get list of games in rental
+                    List<IGame> gamesInRental = rental.getGames();
+
                     //Use foreach on returned list and add to inv
-                    //remove r from customer
+                    foreach (IGame g in gamesInRental)
+                    {
+                        this.inv.addItem(g);
+                    }
+
+                    //remove rental from customer
+                    customersRentals.Remove(rental);
                 }
             }
         }

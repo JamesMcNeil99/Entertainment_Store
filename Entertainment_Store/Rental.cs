@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Entertainment_Store
 {
-    class Rental: IRental
+    public class Rental: IRental
     {
         List<IGame> games;
         int daysRented, maxDays;
@@ -44,6 +44,12 @@ namespace Entertainment_Store
                 return true;
             else
                 return false;
+        }
+
+        // returns list of games
+        public List<IGame> getGames()
+        {
+            return this.games;
         }
 
     }

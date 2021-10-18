@@ -18,7 +18,7 @@ namespace Entertainment_Store
                 foreach (Customer c in customers)
                 {
                     //customers need to return due rentals
-                    store.returnRentals(c, day);
+                    store.returnRentals(c);
                 }
                 
                 

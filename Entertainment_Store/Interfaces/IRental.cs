@@ -12,5 +12,7 @@ namespace Entertainment_Store
         public double getPrice(Dictionary<Genre, double> prices);
 
         public bool isDue();
+
+        public List<IGame> getGames();
     }
 }
