@@ -79,5 +79,9 @@ namespace Entertainment_Store
                 }
             }
         }
+        public List<IRental> getCurrentRentals()
+        {
+            return this.currRentals;
+        }
     }
 }

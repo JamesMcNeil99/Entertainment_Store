@@ -63,6 +63,16 @@ namespace Entertainment_Store
             //
             //print out past rentals with customer name, number of days, total price
             //print out current rentals
+            Console.WriteLine("--------------On Going Rentals--------------");
+            foreach(IRental r in store.getCurrentRentals())
+            {
+                Console.Write($"{r.getCustomer().name} rented  ");
+                    for(int game = 0; game<r.getGames().Count -1; game++)
+                    {
+                    Console.Write(r.getGames()[game] + ", ");
+                    }
+                Console.Write(r.getGames()[r.getGames().Count] + $" for {r.getMaxDays()} days with a total cost of ${String.Format("{0:#,0.##}", ");
+            }
 
 
         }

@@ -52,5 +52,15 @@ namespace Entertainment_Store
             return this.games;
         }
 
+        public Customer getCustomer()
+        {
+            return this.c;
+        }
+
+        public int getMaxDays()
+        {
+            return maxDays;
+        }
+
     }
 }

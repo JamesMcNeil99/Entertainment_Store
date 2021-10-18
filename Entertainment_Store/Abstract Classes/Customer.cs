@@ -6,7 +6,7 @@ namespace Entertainment_Store
 {
     public abstract class Customer
     {
-        string name;
+        public string name { get; }
         protected IRentBehavior r;
         public List<IRental> rentals { get; set; }
         public Customer(IRentBehavior r, string name)

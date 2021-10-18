@@ -14,5 +14,11 @@ namespace Entertainment_Store
         public bool isDue();
 
         public List<IGame> getGames();
+
+        public Customer getCustomer();
+
+        public int getMaxDays();
+
+        pub
     }
 }
