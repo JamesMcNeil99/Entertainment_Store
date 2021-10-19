@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2021-10-19T22:24:31.155Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" etag="SxKkCiIpytQc7e76_-zx" version="15.5.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-10-19T22:35:41.708Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" etag="V8XuSvUbvjdx62DIA31L" version="15.5.6" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="2995" dy="827" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="_dG1kqTOQeq6uRvqZW8x-115" value="Store" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="448.08" y="940" width="240" height="260" as="geometry" />
+          <mxGeometry x="580" y="1020" width="240" height="260" as="geometry" />
         </mxCell>
         <mxCell id="_dG1kqTOQeq6uRvqZW8x-116" value="- pastRentals: List&lt;IRental&gt;&#xa;- currRentals: List&lt;IRental&gt;&#xa;- inv: IInventory&#xa;- profit: double&#xa;- prices: Dictionary&lt;Genre, double&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="_dG1kqTOQeq6uRvqZW8x-115" vertex="1">
           <mxGeometry y="26" width="240" height="84" as="geometry" />
@@ -58,7 +58,7 @@
         <mxCell id="_dG1kqTOQeq6uRvqZW8x-150" value="+ createRental(IInventory): IRental&#xa;+ getNumOfGamesRented(): int&#xa;+ getIsEligible(): bool&#xa;+ getName(): string&#xa;+ getRentals(): List&lt;IRental&gt;&#xa;" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="zkfFHV4jXpPFQw0GAbJ--0" vertex="1">
           <mxGeometry y="96.15789473684212" width="217.03" height="103.84" as="geometry" />
         </mxCell>
-        <mxCell id="_dG1kqTOQeq6uRvqZW8x-154" value="" style="endArrow=open;endFill=1;endSize=12;html=1;entryX=1.005;entryY=0.229;entryDx=0;entryDy=0;entryPerimeter=0;exitX=-0.005;exitY=0.308;exitDx=0;exitDy=0;exitPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="_dG1kqTOQeq6uRvqZW8x-98" target="_dG1kqTOQeq6uRvqZW8x-80" edge="1">
+        <mxCell id="_dG1kqTOQeq6uRvqZW8x-154" value="" style="endArrow=open;endFill=1;endSize=12;html=1;entryX=1.003;entryY=0.579;entryDx=0;entryDy=0;entryPerimeter=0;exitX=-0.005;exitY=0.308;exitDx=0;exitDy=0;exitPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="_dG1kqTOQeq6uRvqZW8x-98" target="_dG1kqTOQeq6uRvqZW8x-76" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="-130" y="480" as="sourcePoint" />
             <mxPoint x="30" y="480" as="targetPoint" />
@@ -92,7 +92,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="pAehy5S-BfIs2XnOSqvV-2" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="_dG1kqTOQeq6uRvqZW8x-61">
+        <mxCell id="pAehy5S-BfIs2XnOSqvV-2" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="_dG1kqTOQeq6uRvqZW8x-56">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="-520" y="340" as="sourcePoint" />
             <mxPoint x="-880" y="570" as="targetPoint" />
@@ -147,7 +147,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="_dG1kqTOQeq6uRvqZW8x-16" value="IRentBehavior(Interface)" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="60" y="1221.5900000000001" width="290" height="52" as="geometry" />
+          <mxGeometry x="180" y="1228.0000000000002" width="290" height="52" as="geometry" />
         </mxCell>
         <mxCell id="_dG1kqTOQeq6uRvqZW8x-17" value="+ rent(IInventory, int, Customer): IRental" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="_dG1kqTOQeq6uRvqZW8x-16" vertex="1">
           <mxGeometry y="26" width="290" height="26" as="geometry" />
@@ -331,7 +331,7 @@
         <mxCell id="_dG1kqTOQeq6uRvqZW8x-87" value="+ amount(): int&#xa;+ addItem(IGame): void&#xa;+ removeItem(IGame): void&#xa;+ retrieveItem(int): IGame&#xa;+ getGames(): List&lt;IGame&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;container=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="520" y="56" width="170" height="94" as="geometry" />
         </mxCell>
-        <mxCell id="_dG1kqTOQeq6uRvqZW8x-95" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="_dG1kqTOQeq6uRvqZW8x-91" target="_dG1kqTOQeq6uRvqZW8x-87" edge="1">
+        <mxCell id="_dG1kqTOQeq6uRvqZW8x-95" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="_dG1kqTOQeq6uRvqZW8x-92" target="_dG1kqTOQeq6uRvqZW8x-87" edge="1">
           <mxGeometry x="440" y="74" width="160" as="geometry">
             <mxPoint x="612.5" y="234" as="sourcePoint" />
             <mxPoint x="772.5" y="234" as="targetPoint" />
@@ -376,7 +376,7 @@
             <mxPoint x="780" y="600" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="_dG1kqTOQeq6uRvqZW8x-141" value="" style="endArrow=open;endFill=1;endSize=12;html=1;exitX=-0.012;exitY=0.139;exitDx=0;exitDy=0;entryX=0.784;entryY=0.995;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="_dG1kqTOQeq6uRvqZW8x-59" target="_dG1kqTOQeq6uRvqZW8x-94" edge="1">
+        <mxCell id="_dG1kqTOQeq6uRvqZW8x-141" value="" style="endArrow=open;endFill=1;endSize=12;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="_dG1kqTOQeq6uRvqZW8x-55" target="_dG1kqTOQeq6uRvqZW8x-94" edge="1">
           <mxGeometry x="370" y="74" width="160" as="geometry">
             <mxPoint x="-370" y="514" as="sourcePoint" />
             <mxPoint x="350" y="544" as="targetPoint" />
@@ -398,16 +398,16 @@
           <mxGeometry y="60" width="230" height="40" as="geometry" />
         </mxCell>
         <mxCell id="_dG1kqTOQeq6uRvqZW8x-91" value="Inventory" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;container=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="370" y="190" width="175" height="150" as="geometry" />
+          <mxGeometry x="170" y="50" width="175" height="150" as="geometry" />
         </mxCell>
         <mxCell id="_dG1kqTOQeq6uRvqZW8x-92" value="- games: List&lt;IGame&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;container=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="370" y="216" width="175" height="26" as="geometry" />
+          <mxGeometry x="170" y="76" width="175" height="26" as="geometry" />
         </mxCell>
         <mxCell id="_dG1kqTOQeq6uRvqZW8x-93" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;container=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="370" y="242" width="175" height="8" as="geometry" />
+          <mxGeometry x="170" y="102" width="175" height="8" as="geometry" />
         </mxCell>
         <mxCell id="_dG1kqTOQeq6uRvqZW8x-94" value="+ amount(): int&#xa;+ addItem(IGame): void&#xa;+ removeItem(IGame): void&#xa;+ retrieveItem(int i): IGame&#xa;+ getGames(): List&lt;IGame&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;container=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="370" y="250" width="175" height="90" as="geometry" />
+          <mxGeometry x="170" y="110" width="175" height="90" as="geometry" />
         </mxCell>
         <mxCell id="pAehy5S-BfIs2XnOSqvV-53" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;entryX=0.363;entryY=0.996;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="_dG1kqTOQeq6uRvqZW8x-54" target="_dG1kqTOQeq6uRvqZW8x-113">
           <mxGeometry width="160" relative="1" as="geometry">
@@ -520,6 +520,12 @@
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="-540" y="480" as="sourcePoint" />
             <mxPoint x="-380" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pAehy5S-BfIs2XnOSqvV-60" value="" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;exitX=0.245;exitY=1.008;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="_dG1kqTOQeq6uRvqZW8x-87">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="-160" y="980" as="sourcePoint" />
+            <mxPoint x="380" y="1230" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
