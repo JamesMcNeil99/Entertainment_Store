@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Tyler's Portion
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -16,24 +18,27 @@ namespace Entertainment_Store
             this.r = r;
         }
 
-        public IRental createRental(IInventory games)
+        //Creates an IRental object using the Customer's rental behavior, r. Adds created rental to list of rentals and finally returns rental. 
+        public IRental createRental(IInventory games, Dictionary<Genre, double> prices)
         {
-            IRental rental = r.rent(games, getNumOfGamesRented(), this);
+            IRental rental = r.rent(games, getNumOfGamesRented(), this, prices);
             rentals.Add(rental);
             return rental;
          
         }
 
+        //Gets number of games currently rented by customer.
         public int getNumOfGamesRented()
         {
             int x = 0;
             foreach (IRental rental in rentals)
             {
-                x += rental.amount();
+                x += rental.count();
             }
             return x;
         }
 
+        //Uses number of games currently rented to determine if customer can rent another game (Store policy is 3 per customer). 
         public bool getIsEligible()
         {
             int x = getNumOfGamesRented();

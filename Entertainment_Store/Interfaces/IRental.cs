@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Cameron's Portion
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -7,7 +9,7 @@ namespace Entertainment_Store
     public interface IRental
     {
         public void addDay();
-        public int amount();
+        public int count();
 
         public double getPrice(Dictionary<Genre, double> prices);
 

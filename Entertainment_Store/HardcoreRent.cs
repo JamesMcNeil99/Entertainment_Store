@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Tyler's Portion
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,7 +8,9 @@ namespace Entertainment_Store
 {
     public class HardcoreRent: IRentBehavior
     {
-        public IRental rent(IInventory games, int numOfGames, Customer customer)
+
+        //Creates rental object using specified rental behavior (3 games for 7 days)
+        public IRental rent(IInventory games, int numOfGames, Customer customer, Dictionary<Genre, double> prices)
         {
             Random rand = new Random();
             int days = 7;
@@ -14,10 +18,10 @@ namespace Entertainment_Store
 
             while (selectedGames.Count < 3)
             {
-                int index = rand.Next(games.amount());
+                int index = rand.Next(games.count());
                 selectedGames.Add(games.retrieveItem(index));
             }
-            return RentalGenerator.createRental(days, selectedGames, customer);
+            return RentalGenerator.createRental(days, selectedGames, customer, prices);
         }
     }
 }

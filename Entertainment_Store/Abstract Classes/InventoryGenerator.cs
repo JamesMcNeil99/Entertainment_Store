@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Tyler's Portion
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,7 +8,10 @@ namespace Entertainment_Store
 {
     abstract class InventoryGenerator
     {
+        //Array of game names to be used when creating store inventory. 
         static string[] gameNames = { "Back 4 Blood", "Halo Infinite", "Far Cry 6", "Battlefield 6", "Deathloop", "Riders Republic", "Marvel's Guardians of the Galaxy", "Resident Evil Village", "Metroid Dread", "Call of Duty Vanguard", "Hitman 3", "Forza Horizon 5", "Psychonauts 2", "House of Ashes", "Jurassic World Evolved", "Ratchet & Clank: Rift Apart", "Outriders", "Monster Hunter Rise", "Age of Empires IV", "Stray", "Kena: Bridge of Spirits" };
+        
+        //creates inventory object and handles dependencies. 
         public static IInventory create()
         {
             List<IGame> games = createGames();
@@ -14,6 +19,8 @@ namespace Entertainment_Store
 
             return inv;
         }
+
+        //Fills inventory with 20 games using array gameNames and randomly assigns a genre. 
         public static List<IGame> createGames()
         {
             List<IGame> games = new List<IGame>();

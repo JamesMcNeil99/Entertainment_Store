@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Tyler's Portion
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -13,7 +15,7 @@ namespace Entertainment_Store
             this.games = games;
         }
 
-        public int amount()
+        public int count()
         {
             return games.Count;
         }

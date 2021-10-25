@@ -15,6 +15,7 @@ namespace Entertainment_Store
             //main loop:
             for(int day = 0; day < 35; day++)
             {
+                //Cameron's portion
                 //---------------------------Morning Portion (Before Open for Business)---------------------
                 if(day != 0)
                     foreach (Customer c in customers)
@@ -22,11 +23,12 @@ namespace Entertainment_Store
                         //customers need to return due rentals
                         store.returnRentals(c);
                     }
-                
-                
-                
+
+
+                //Tyler's portion
                 //---------------------------Day Portion (Open for Business)---------------------
-                
+
+
                 Random rand = new Random();
                 int customersToday = rand.Next(1, 11);
                 int servicedCustomers = 0;
@@ -55,15 +57,16 @@ namespace Entertainment_Store
                     }
                 }
 
-
+                //Cameron's portion
                 //---------------------------Night Portion (After Closed for Business)---------------------
                 //Loop through active rentals, increment day count to check before 
                 store.updateRentals();
 
             }
 
-            //print out past rentals, current rentals,  and money made.
-            Console.WriteLine("Store inventory amount: " + store.inv.amount());
+            //Cameron's portion
+            //print out Games in inventory
+            Console.WriteLine("Store inventory amount: " + store.inv.count());
             List<IGame> gamesInStore = store.inv.getGames();
             Console.WriteLine("List of games currently available in the inventory: ");
             foreach(IGame game in gamesInStore)
@@ -75,13 +78,13 @@ namespace Entertainment_Store
             // amount of money the store made in the 35 days
             Console.WriteLine("Store's earnings in the past 35 days: $" + String.Format("{0:#,0.00}", store.profit));
             Console.WriteLine();
-            //print out games in the store inventory and name
-            //
+
+            //Tyler's portion
             //print out past rentals with customer name, number of days, total price
             Console.WriteLine("--------------Past Rentals--------------");
             foreach (IRental r in store.getPastRentals())
             {
-                Console.Write($"{r.getCustomer().name} rented  ");
+                Console.Write($"{r.getCustomer().name} rented ");
                 for (int game = 0; game < r.getGames().Count - 1; game++)
                 {
                     Console.Write(r.getGames()[game].getTitle() + ", ");
@@ -103,10 +106,12 @@ namespace Entertainment_Store
 
 
         }
-        
-        
-        
-        
+
+
+
+        //Tyler's portion
+        //Helper method to create array of customers. Each customer is randomly assigned to be casual, hardcore, or professional.
+        //Uses CustomerGenerator class to handle dependencies
         public static Customer[] makeCustomers()
         {
             Customer[] customers = new Customer[10];

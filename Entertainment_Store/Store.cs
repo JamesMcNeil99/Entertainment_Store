@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Tyler's Portion
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -19,18 +21,24 @@ namespace Entertainment_Store
             prices = setPrices();
         }
 
+
+        //returns number of games available to rent.
         public int gamesAvailable()
         {
-            return inv.amount();
+            return inv.count();
         }
         
+
+        //Receives an eligible customer, lets them select games for a rental, and adds total for rental to total profits
         public void serviceCustomer(Customer c)
         {
-            IRental rental = c.createRental(this.inv);
+            IRental rental = c.createRental(this.inv, prices);
             this.currRentals.Add(rental);
-            profit += rental.getPrice(prices);
+            profit += rental.getTotal();
 
         }
+
+        //Sets the prices to rent a game based on genre, returns dictionary of prices per genre
         public Dictionary<Genre, double> setPrices()
         {
             Dictionary<Genre, double> d = new Dictionary<Genre, double>();
@@ -45,6 +53,7 @@ namespace Entertainment_Store
 
         }
 
+        //adds 1 day to all active rentals 
         public void updateRentals()
         {
             foreach(IRental r in currRentals)
@@ -53,6 +62,7 @@ namespace Entertainment_Store
             }
         }
 
+        //Checks customers for due rentals, adds rental to past rental list if it is due, and returns games to inventory
         public void returnRentals(Customer c)
         {
             List<IRental> customersRentals = c.rentals;

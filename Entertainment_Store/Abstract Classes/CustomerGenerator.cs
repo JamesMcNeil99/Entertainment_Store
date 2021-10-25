@@ -1,15 +1,19 @@
-﻿using System;
+﻿//Tyler's Portion
+
+using System;
 using System.Collections.Generic;
 using System.Text;
-using Unity;
 
 namespace Entertainment_Store
 {
     abstract class CustomerGenerator
     {
-
+        //Array of unique names to be used when creating customers. 
         static string[] name = { "John", "James", "Daniel", "David", "Joe", "Matthew", "Michael", "Nick", "Andrew", "Adam" } ;
         static int count = 0;
+
+        //Static methods to be used for creating Casual, Hardcore, and Professional Customers.
+        //Handles dependencies for the created customer, creates appropriate IRentalBehavior object and passed to constructor.
         public static Customer createCasualCustomer()
         {
             count++;
