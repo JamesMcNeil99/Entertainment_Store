@@ -22,5 +22,7 @@ namespace Entertainment_Store
         public int getMaxDays();
 
         public double getTotal();
+
+        public int getDaysRented();
     }
 }

@@ -80,6 +80,10 @@ namespace Entertainment_Store
         {
             return total;
         }
+        public int getDaysRented()
+        {
+            return daysRented;
+        }
 
     }
 }

@@ -33,6 +33,13 @@ namespace Entertainment_Store
         public void serviceCustomer(Customer c)
         {
             IRental rental = c.createRental(this.inv, prices);
+            Console.Write($"Customer {c.name} rented ");
+            for(int game = 0; game<rental.getGames().Count -1; game++)
+            {
+                Console.Write(rental.getGames()[game].getTitle() + ", ");
+            }
+            Console.Write($"{rental.getGames()[rental.getGames().Count - 1].getTitle()} for {rental.getMaxDays()} days\n");
+
             this.currRentals.Add(rental);
             profit += rental.getTotal();
 
@@ -95,6 +102,12 @@ namespace Entertainment_Store
                 // removes rentals from customer's rental
                 foreach(IRental rental in rentalsToRemove)
                 {
+                    Console.Write($"Customer {rental.getCustomer().name} returned ");
+                    for (int game = 0; game < rental.getGames().Count - 1; game++)
+                    {
+                        Console.Write(rental.getGames()[game].getTitle() + ", ");
+                    }
+                    Console.Write($"{rental.getGames()[rental.getGames().Count - 1].getTitle()} after {rental.getDaysRented()} days with a maximum days of {rental.getMaxDays()}\n");
                     customersRentals.Remove(rental);
                 }
             }

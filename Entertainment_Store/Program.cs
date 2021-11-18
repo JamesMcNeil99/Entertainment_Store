@@ -15,6 +15,7 @@ namespace Entertainment_Store
             //main loop:
             for(int day = 0; day < 35; day++)
             {
+                Console.WriteLine($"-------------------------------Day {day}-------------------------------");
                 //Cameron's portion
                 //---------------------------Morning Portion (Before Open for Business)---------------------
                 if(day != 0)
@@ -61,6 +62,7 @@ namespace Entertainment_Store
                 //---------------------------Night Portion (After Closed for Business)---------------------
                 //Loop through active rentals, increment day count to check before 
                 store.updateRentals();
+                Console.WriteLine("");
 
             }
 
